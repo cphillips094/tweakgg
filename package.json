@@ -9,6 +9,7 @@
 		"lodash-es": "^4.17.21",
 		"react": "^17.0.1",
 		"react-dom": "^17.0.1",
+		"react-flexbox-grid": "^2.1.2",
 		"react-scripts": "4.0.3",
 		"react-spring": "^9.0.0-rc.3",
 		"react-twitch-embed": "^2.1.0",
