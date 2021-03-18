@@ -3,11 +3,12 @@ import React, { useRef } from 'react'
 import clamp from 'lodash-es/clamp'
 import { useSprings, animated } from 'react-spring'
 import { useDrag } from 'react-use-gesture'
+import Index from './twitch/index'
 import './view-pager.css'
 import './index.css'
 
 const pages = [
-	<React.Fragment></React.Fragment>,
+	<Index />,
 	<React.Fragment></React.Fragment>,
 	<React.Fragment></React.Fragment>,
 	<React.Fragment></React.Fragment>,
@@ -35,7 +36,7 @@ function Viewpager() {
 	return props.map(({ x, display, scale }, i) => (
 		<animated.div {...bind()} key={i} style={{ display, x }}>
 			<animated.div style={{ scale }}>
-
+				{pages[i]}
 			</animated.div>
 		</animated.div>
 	))
