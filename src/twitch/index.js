@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import { TwitchChat, TwitchPlayer } from 'react-twitch-embed';
-import "./index.css"
+import Slider from '../side-scroller';
 import "./index.css";
 
 const Index = () => {
@@ -34,8 +34,13 @@ const Index = () => {
 						</Row>
 						<Row>
 							<Col xs={12}>
-								<div class='twitch-content'>
-									<div style={{ width: '100%', height: '150px', outline: '2px solid purple', marginTop: '30px' }}></div>
+								<div className='twitch-content' style={{ marginTop: '20px' }}>
+									<h2>
+										TOP CLIPS
+									</h2>
+									<Slider
+										items={clips}
+									/>
 								</div>
 							</Col>
 						</Row>
