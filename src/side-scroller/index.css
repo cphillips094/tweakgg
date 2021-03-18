@@ -16,3 +16,22 @@
 .scrolling-item:last-child {
 	margin-right: 0;
 }
+
+.scrolling-wrapper::-webkit-scrollbar {
+	width: 1em;
+}
+
+.scrolling-wrapper::-webkit-scrollbar-track {
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px #14082C;
+	box-shadow: inset 0 0 6px #14082C;
+}
+
+.scrolling-wrapper::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background-color: #14082C;
+}
+
+.scrolling-wrapper::-webkit-scrollbar:vertical {
+	display: none;
+}
