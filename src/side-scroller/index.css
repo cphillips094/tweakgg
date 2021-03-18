@@ -1,0 +1,18 @@
+.scrolling-wrapper {
+	display: flex;
+	flex-wrap: nowrap;
+	overflow-x: auto;
+}
+
+.scrolling-item {
+	flex: 0 0 auto;
+	margin: 0 10px;
+}
+
+.scrolling-item:first-child {
+	margin-left: 0;
+}
+
+.scrolling-item:last-child {
+	margin-right: 0;
+}
