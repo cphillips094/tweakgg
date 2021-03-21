@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import { TwitchChat, TwitchPlayer } from 'react-twitch-embed';
 import Slider from '../side-scroller';
+import Logo from '../assets/images/full-logo.png'
 import "./index.css";
 
 const Index = () => {
@@ -116,66 +117,69 @@ const Index = () => {
 
 	return (
 		<div id="twitch-page">
+			<div>
 				<img
 					class='tweak-logo filter-shadow'
 					src={Logo}
 					alt=''
 				/>
-		<Grid
-			fluid
-			id='twitch-container'
-		>
-			<Row>
-				<Col
-					className='col'
-					xs={9}
+				<Grid
+					fluid
+					id='twitch-container'
 				>
-					<Grid fluid>
-						<Row>
-							<Col xs={12}>
-								<div className='twitch-content'>
-									<h1>
-										{streamTitle.toUpperCase()}
-									</h1>
-									<TwitchPlayer
-										id='twitch-player'
-										className='shadow'
-										channel='tweak'
-										muted
-										height="100%"
-										width="100%"
-									/>
-								</div>
-							</Col>
-						</Row>
-						<Row>
-							<Col xs={12}>
-								<div className='twitch-content' style={{ marginTop: '20px' }}>
-									<h2>
-										TOP CLIPS
-									</h2>
-									<Slider
-										items={clips}
-									/>
-								</div>
-							</Col>
-						</Row>
-					</Grid>
-				</Col>
-				<Col
-					className='col'
-					xs={3}
-				>
-					<TwitchChat
-						id='twitch-chat'
-						className='shadow'
-						channel='tweak'
-						theme='dark'
-						height='100%'
-					/>
-				</Col>
-			</Row>
-		</Grid>
+					<Row>
+						<Col
+							className='col'
+							xs={9}
+						>
+							<Grid fluid>
+								<Row>
+									<Col xs={12}>
+										<div className='twitch-content'>
+											<h1>
+												{streamTitle.toUpperCase()}
+											</h1>
+											<TwitchPlayer
+												id='twitch-player'
+												className='shadow'
+												channel='tweak'
+												muted
+												height="100%"
+												width="100%"
+											/>
+										</div>
+									</Col>
+								</Row>
+								<Row>
+									<Col xs={12}>
+										<div className='twitch-content' style={{ marginTop: '20px' }}>
+											<h2 style={{ marginBottom: '10px' }}>
+												TOP CLIPS
+											</h2>
+											<Slider
+												items={clips}
+												className='filter-shadow'
+											/>
+										</div>
+									</Col>
+								</Row>
+							</Grid>
+						</Col>
+						<Col
+							className='col'
+							xs={3}
+						>
+							<TwitchChat
+								id='twitch-chat'
+								className='shadow'
+								channel='tweak'
+								theme='dark'
+								height='100%'
+							/>
+						</Col>
+					</Row>
+				</Grid>
+			</div>
 		</div>
 	);
 }

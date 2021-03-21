@@ -1,3 +1,14 @@
+#twitch-page {
+	height: 100%;
+	background-image: url('../assets/images/brick.jpg');
+	background-size: cover;
+}
+
+#twitch-page > div{
+	height: 100%;
+	background: linear-gradient(150deg, #6F1FA3 14%, #A7A8AB 14% 15%, transparent 15% 30%, #A7A8AB 30% 31%, #4F0677 31%, #270A41);
+}
+
 .tweak-logo {
 	height: 100px;
 	position: absolute;
