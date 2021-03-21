@@ -3,12 +3,10 @@
 	src: url("./assets/fonts/Proxima-Nova-Black.otf") format("opentype");
 }
 
-
 h1,
 h2,
 h3,
 h4 {
-	text-shadow: -10px 10px 20px #14082C;
 	background: -webkit-linear-gradient(#E3E5E2 45%, #A7A8AB 45%);
 	background-clip: text;
 	-webkit-background-clip: text;
@@ -16,5 +14,9 @@ h4 {
 }
 
 .shadow {
-	box-shadow: -10px 10px 20px #14082C;
+	box-shadow: -10px 10px 10px #270A41;
+}
+
+.filter-shadow {
+	filter: drop-shadow(-10px 10px 10px #270A41);
 }
