@@ -115,6 +115,12 @@ const Index = () => {
 	}
 
 	return (
+		<div id="twitch-page">
+				<img
+					class='tweak-logo filter-shadow'
+					src={Logo}
+					alt=''
+				/>
 		<Grid
 			fluid
 			id='twitch-container'
@@ -170,6 +176,7 @@ const Index = () => {
 				</Col>
 			</Row>
 		</Grid>
+		</div>
 	);
 }
 

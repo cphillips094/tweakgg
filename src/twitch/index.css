@@ -1,3 +1,12 @@
+.tweak-logo {
+	height: 100px;
+	position: absolute;
+	top: 20px;
+	left: 50px;
+	-webkit-animation: bob 5s ease-in-out infinite;
+	animation: bob 5s ease-in-out infinite;
+}
+
 #twitch-container,
 #twitch-container > .row {
 	height: 100%;
@@ -32,4 +41,19 @@
 .twitch-content {
 	margin: auto;
 	max-width: 75%;
+}
+
+@-webkit-keyframes bob {
+	50% {
+		-webkit-transform: translateY(10px);
+		transform: translateY(10px);
+		animation-timing-function: ease-in-out;
+	}
+}
+@keyframes bob {
+	50% {
+		-webkit-transform: translateY(10px);
+		transform: translateY(10px);
+		animation-timing-function: ease-in-out;
+	}
 }
