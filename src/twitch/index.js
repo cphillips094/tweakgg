@@ -102,15 +102,13 @@ const Index = () => {
 		let clips = [];
 		if (json) {
 			clips = json.data.map(clipData =>
-				<div className='shadow'>
-					<a
-						href={clipData.url}
-						title={clipData.title}
-						target='_blank'
-					>
-						<img src={clipData.thumbnail_url} style={{ maxHeight: '100px' }} />
-					</a>
-				</div>
+				<a
+					href={clipData.url}
+					title={clipData.title}
+					target='_blank'
+				>
+					<img src={clipData.thumbnail_url} style={{ maxHeight: '100px' }} />
+				</a>
 			);
 		}
 		return clips;
