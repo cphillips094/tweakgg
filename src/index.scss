@@ -1,3 +1,5 @@
+@use './variables' as v;
+
 @font-face {
 	font-family: ProximaNovaBlack;
 	src: url("./assets/fonts/Proxima-Nova-Black.otf") format("opentype");
@@ -14,10 +16,23 @@ h4 {
 	-webkit-text-fill-color: transparent;
 }
 
+.rounded {
+	border-radius: v.$rounded-large;
+}
+
+.colorful-border {
+	padding: 3px;
+	background-image: linear-gradient(to top right, v.$light-blue, v.$dark-blue, v.$light-purple, v.$med-purple, v.$dark-purple);
+
+	&.big-border {
+		padding: 5px;
+	}
+}
+
 .shadow {
-	box-shadow: -10px 10px 10px black;
+	box-shadow: 10px 10px 10px black;
 }
 
 .filter-shadow {
-	filter: drop-shadow(-10px 10px 10px black);
+	filter: drop-shadow(10px 10px 10px black);
 }

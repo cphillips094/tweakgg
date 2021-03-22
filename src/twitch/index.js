@@ -103,13 +103,15 @@ const Index = () => {
 		let clips = [];
 		if (json) {
 			clips = json.data.map(clipData =>
-				<a
-					href={clipData.url}
-					title={clipData.title}
-					target='_blank'
-				>
-					<img src={clipData.thumbnail_url} />
-				</a>
+				<div className='clip-container colorful-border'>
+					<a
+						href={clipData.url}
+						title={clipData.title}
+						target='_blank'
+					>
+						<img src={clipData.thumbnail_url} />
+					</a>
+				</div>
 			);
 		}
 		return clips;
@@ -143,14 +145,15 @@ const Index = () => {
 										<h1>
 											{streamTitle.toUpperCase()}
 										</h1>
-										<TwitchPlayer
-											id='twitch-player'
-											className='shadow'
-											channel='tweak'
-											muted
-											height="100%"
-											width="100%"
-										/>
+										<div className='colorful-border big-border shadow rounded'>
+											<TwitchPlayer
+												id='twitch-player'
+												channel='tweak'
+												muted
+												height="100%"
+												width="100%"
+											/>
+										</div>
 									</div>
 								</Col>
 							</Row>
