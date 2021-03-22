@@ -3,7 +3,7 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 import { TwitchChat, TwitchPlayer } from 'react-twitch-embed';
 import Slider from '../side-scroller';
 import Logo from '../assets/images/full-logo.png'
-import "./index.css";
+import "./index.scss";
 
 const Index = () => {
 	const [token, setToken] = useState('');
@@ -108,7 +108,7 @@ const Index = () => {
 					title={clipData.title}
 					target='_blank'
 				>
-					<img src={clipData.thumbnail_url} style={{ maxHeight: '100px', border: '2px solid #6F1FA3' }} />
+					<img src={clipData.thumbnail_url} />
 				</a>
 			);
 		}

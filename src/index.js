@@ -4,8 +4,8 @@ import clamp from 'lodash-es/clamp'
 import { useSprings, animated } from 'react-spring'
 import { useDrag } from 'react-use-gesture'
 import Index from './twitch/index'
-import './view-pager.css'
-import './index.css'
+import './view-pager.scss'
+import './index.scss'
 
 const pages = [
 	<Index />,
