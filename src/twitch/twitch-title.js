@@ -2,21 +2,25 @@ import React from 'react';
 
 const TwitchTitle = ({ loading, error, title }) => {
 	return (
-		<h1>
-			{
-				(
-					loading &&
-					'Loading Stream...'
-				) ||
-				(
-					(
-						error &&
-						''
-					) ||
-					title
-				)
-			}
-		</h1>
+		<div id='stream-title-container' className='colorful-border big-border shadow rounded'>
+			<div>
+				<h1>
+					{
+						(
+							loading &&
+							'Loading Stream...'
+						) ||
+						(
+							(
+								error &&
+								''
+							) ||
+							title
+						)
+					}
+				</h1>
+			</div>
+		</div>
 	)
 }
 
