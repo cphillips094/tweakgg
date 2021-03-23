@@ -1,12 +1,9 @@
 #twitch-page {
 	height: 100%;
-	background-image: url('../assets/images/brick.jpg');
+	background-image: url('../assets/images/arcs.png'), url('../assets/images/brick.jpg');
+	background-position: left bottom, left top;
+	background-repeat: no-repeat;
 	background-size: cover;
-}
-
-#twitch-page > div{
-	height: 100%;
-	background: linear-gradient(150deg, #6F1FA3 14%, #A7A8AB 14% 15%, transparent 15% 30%, #A7A8AB 30% 31%, #4F0677 31%, #270A41);
 }
 
 .tweak-logo {
@@ -33,6 +30,7 @@
 }
 
 #twitch-player {
+	border: 5px solid #6F1FA3;
 	padding-top: 56.25%;
 	position: relative;
 	height: 0;
