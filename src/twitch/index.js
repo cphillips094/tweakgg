@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import configData from '../configuration/app.json';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import TwitchTitle from './twitch-title'
 import { TwitchChat, TwitchPlayer } from 'react-twitch-embed';
@@ -74,7 +75,7 @@ const Index = () => {
 	useEffect(() => {
 		const fetchToken = async () => {
 			const token = await fetchResource(
-				'https://id.twitch.tv/oauth2/token?client_id=eyt3nit0oell5gdmi1jvr9mlmbjvrn&client_secret=pviql3gqkrhwe4sh0u0tbv59hadnq1&grant_type=client_credentials',
+				`https://id.twitch.tv/oauth2/token?client_id=${configData.clientId}&client_secret=${configData.clientSecret}&grant_type=client_credentials`,
 				{ method: 'POST' },
 				'access_token',
 				(json) => json['access_token'],
@@ -90,11 +91,11 @@ const Index = () => {
 	useEffect(() => {
 		const fetchStreamTitle = async (token) => {
 			const streamTitle = await fetchResource(
-				'https://api.twitch.tv/helix/channels?broadcaster_id=158130480',
+				`https://api.twitch.tv/helix/channels?broadcaster_id=${configData.broadcasterId}`,
 				{
 					method: 'GET',
 					headers: {
-						'client-id': 'eyt3nit0oell5gdmi1jvr9mlmbjvrn',
+						'client-id': configData.clientId,
 						'Authorization': `Bearer ${token}`
 					}
 				},
@@ -107,11 +108,11 @@ const Index = () => {
 		}
 		const fetchClips = async (token) => {
 			const clips = await fetchResource(
-				'https://api.twitch.tv/helix/clips?broadcaster_id=158130480',
+				`https://api.twitch.tv/helix/clips?broadcaster_id=${configData.broadcasterId}`,
 				{
 					method: 'GET',
 					headers: {
-						'client-id': 'eyt3nit0oell5gdmi1jvr9mlmbjvrn',
+						'client-id': configData.clientId,
 						'Authorization': `Bearer ${token}`
 					}
 				},

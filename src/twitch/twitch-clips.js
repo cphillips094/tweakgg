@@ -1,4 +1,5 @@
 import React from 'react';
+import pageData from '../configuration/twitch-page.json';
 import Slider from '../side-scroller';
 
 const TwitchClips = ({ loading, error, clips }) => {
@@ -11,7 +12,7 @@ const TwitchClips = ({ loading, error, clips }) => {
 						!error &&
 						<>
 							<h2 style={{ marginBottom: '10px' }}>
-								TOP CLIPS
+								{pageData.clipsTitle || 'Clips'}
 							</h2>
 							<Slider
 								items={clips}
