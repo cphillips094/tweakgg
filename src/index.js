@@ -3,13 +3,14 @@ import React, { useRef } from 'react'
 import clamp from 'lodash-es/clamp'
 import { useSprings, animated } from 'react-spring'
 import { useDrag } from 'react-use-gesture'
-import Index from './twitch/index'
+import Twitch from './twitch/index'
+import Social from './social/index'
 import './view-pager.scss'
 import './index.scss'
 
 const pages = [
-	<Index />,
-	<React.Fragment></React.Fragment>,
+	<Social />,
+	<Twitch />,
 	<React.Fragment></React.Fragment>,
 	<React.Fragment></React.Fragment>,
 ]

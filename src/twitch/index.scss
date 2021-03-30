@@ -1,7 +1,6 @@
 @use '../variables' as v;
 
 #twitch-page {
-	height: 100%;
 	background-image: url('../assets/images/arcs.png'), url('../assets/images/brick.jpg');
 	background-position: left bottom, left top;
 	background-repeat: no-repeat;
@@ -20,7 +19,6 @@
 #twitch-container,
 #twitch-container > .row {
 	height: 100%;
-	padding: 0;
 
 	& > .col:first-child {
 		margin: auto;

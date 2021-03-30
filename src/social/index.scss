@@ -1,0 +1,32 @@
+@use '../variables' as v;
+
+#social-page {
+	background-image: url('../assets/images/brick.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.media-row {
+	height: 50%;
+	width: 100%;
+}
+
+.media-col {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.media-item {
+	width: 90%;
+	margin: auto;
+	background-color: v.$light-purple;
+}
+
+#main-media {
+	width: 90%;
+	position: absolute;
+	left: 5%;
+	background-color: v.$light-purple;
+}
