@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import configData from '../configuration/app.json';
 import { Grid, Row, Col } from 'react-flexbox-grid';
+import BobbingLogo from '../bobbing-logo';
 import TwitchTitle from './twitch-title'
 import { TwitchChat, TwitchPlayer } from 'react-twitch-embed';
 import TwitchClips from './twitch-clips';
-import Logo from '../assets/images/full-logo.png';
 import "./index.scss";
 
 const fetchResource = async (url, fetchConfig, resourceName, resourceAccessor, resourceErrorSetter, resourceLoadingSetter) => {
@@ -130,18 +130,11 @@ const Index = () => {
 	}, [token])
 
 	return (
-		<div id="twitch-page">
-			<a
-				href='https://www.twitch.tv/tweak'
-				target='_blank'
-				rel='noreferrer'
-			>
-				<img
-					class='tweak-logo filter-shadow'
-					src={Logo}
-					alt=''
-				/>
-			</a>
+		<div
+			id="twitch-page"
+			className='page-container'
+		>
+			<BobbingLogo />
 			<Grid
 				fluid
 				id='twitch-container'
