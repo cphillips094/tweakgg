@@ -8,6 +8,9 @@ import { RiCloseCircleLine } from 'react-icons/ri'
 import YouTube from './expanded/youtube';
 import './index.scss';
 
+import testPlaylistData from './testing/testPlaylistData';
+import testPlaylistItemData from './testing/testPlaylistItemData';
+
 const Index = () => {
 	const [selectedMediaIndex, setSelectedMediaIndex] = useState(null);
 	const [mediaIsOpen, setMediaIsOpen] = useState(false);
