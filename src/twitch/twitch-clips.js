@@ -12,7 +12,7 @@ const TwitchClips = ({ loading, error, clips }) => {
 						!error &&
 						<>
 							<h2 style={{ marginBottom: '10px' }}>
-								{pageData.clipsTitle || 'Clips'}
+								{pageData.clipsTitle.toUpperCase() || 'CLIPS'}
 							</h2>
 							<Slider
 								items={clips}
