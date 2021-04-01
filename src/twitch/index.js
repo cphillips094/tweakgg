@@ -138,6 +138,7 @@ const Index = () => {
 			<Grid
 				fluid
 				id='twitch-container'
+				className='page-grid'
 			>
 				<Row>
 					<Col

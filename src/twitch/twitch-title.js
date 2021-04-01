@@ -2,8 +2,11 @@ import React from 'react';
 
 const TwitchTitle = ({ loading, error, title }) => {
 	return (
-		<div id='stream-title-container' className='colorful-border big-border shadow rounded'>
-			<div>
+		<div
+			id='stream-title-container'
+			className='colorful-border big-border shadow rounded'
+		>
+			<div className='bg-gradient'>
 				<h1>
 					{
 						(

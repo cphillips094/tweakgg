@@ -1,6 +1,7 @@
 @use '../variables' as v;
 
 #social-page {
+	padding-left: 150px;
 	background-image: url('../assets/images/brick.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -21,12 +22,36 @@
 .media-item {
 	width: 90%;
 	margin: auto;
-	background-color: v.$light-purple;
+}
+
+#main-media > div  {
+	padding: 8px 0;
+	height: 100%;
+	width: 100%;
+}
+
+.media-item > div {
+	height: 100%;
+	width: 100%;
+	padding: 8px 16px;
+}
+
+.media-title {
+	cursor: pointer;
+}
+
+#main-media .close {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	color: white;
+	width: 32px;
+	height: 32px;
 }
 
 #main-media {
-	width: 90%;
+	width: 80%;
 	position: absolute;
-	left: 5%;
+	right: 5%;
 	background-color: v.$light-purple;
 }
